@@ -508,10 +508,14 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     # Title
     # ==========================
 
-    story.append(Paragraph(" Used Car Price Prediction Report", title))
+    from datetime import datetime
+    from zoneinfo import ZoneInfo
+    
+    india_time = datetime.now(ZoneInfo("Asia/Kolkata"))
+    
     story.append(
         Paragraph(
-            f"Generated on: {datetime.now().strftime('%d %B %Y  %I:%M %p')}",
+            f"Generated on: {india_time.strftime('%d %B %Y %I:%M %p')}",
             normal,
         )
     )
