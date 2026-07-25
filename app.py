@@ -73,6 +73,168 @@ st.markdown("""
 .menu a:hover{
     color:#22c55e;
 }
+
+@media (max-width: 992px){
+
+    .navbar{
+        flex-direction:column;
+        align-items:center;
+        gap:18px;
+    }
+
+    .logo{
+        font-size:28px;
+        text-align:center;
+        white-space:normal;
+    }
+
+    .menu{
+        justify-content:center;
+        flex-wrap:wrap;
+        gap:18px;
+    }
+
+    .menu a{
+        font-size:16px;
+    }
+
+}
+
+@media (max-width:576px){
+
+    .logo{
+        font-size:22px;
+        text-align:center;
+    }
+
+    .menu{
+        display:none;
+    }
+
+}
+
+/* ============================= */
+/* Prediction Card Responsive */
+/* ============================= */
+
+.prediction-card{
+    background:linear-gradient(135deg,#14532D,#166534);
+    padding:35px;
+    border-radius:18px;
+    color:white;
+    margin-top:20px;
+    box-shadow:0 6px 20px rgba(0,0,0,.25);
+}
+
+.prediction-title{
+    font-size:38px;
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.prediction-text{
+    font-size:19px;
+    color:#E5E7EB;
+}
+
+.price-label{
+    font-size:22px;
+    font-weight:600;
+}
+
+.price-value{
+    font-size:60px;
+    font-weight:700;
+    color:white;
+    margin:10px 0;
+}
+
+.price-full{
+    font-size:24px;
+    color:#D1FAE5;
+}
+
+.model-info{
+    font-size:18px;
+}
+
+.disclaimer{
+    font-size:17px;
+    color:#D1FAE5;
+    font-style:italic;
+}
+
+/* ============================= */
+/* Tablet */
+/* ============================= */
+
+@media (max-width:992px){
+
+.prediction-card{
+    padding:28px;
+}
+
+.prediction-title{
+    font-size:30px;
+}
+
+.price-value{
+    font-size:46px;
+}
+
+.price-full{
+    font-size:20px;
+}
+
+.model-info,
+.disclaimer,
+.prediction-text{
+    font-size:16px;
+}
+
+}
+
+/* ============================= */
+/* Mobile */
+/* ============================= */
+
+@media (max-width:576px){
+
+.prediction-card{
+    padding:20px;
+    border-radius:14px;
+}
+
+.prediction-title{
+    font-size:20px;
+}
+
+.prediction-text{
+    font-size:14px;
+}
+
+.price-label{
+    font-size:16px;
+}
+
+.price-value{
+    font-size:34px;
+    line-height:1.2;
+}
+
+.price-full{
+    font-size:17px;
+}
+
+.model-info{
+    font-size:15px;
+}
+
+.disclaimer{
+    font-size:14px;
+}
+
+}
 </style>
 
 <div class="navbar">
@@ -257,51 +419,25 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     
 
     st.markdown(f"""
-    <div style="
-    background: linear-gradient(135deg,#14532D,#166534);
-    padding:35px;
-    border-radius:18px;
-    color:white;
-    margin-top:20px;
-    box-shadow:0 6px 20px rgba(0,0,0,0.25);
-    ">
+    <div class="prediction">
 
-    <h2 style="margin-top:0;">
+    <h2 class="prediction-title">
     📋 Prediction Summary
     </h2>
 
-    <p style="
-    font-size:19px;
-    margin-bottom:30px;
-    color:#E5E7EB;
-    ">
+    <p class="prediction-text">
     Based on the selected specifications, the estimated resale value of this vehicle is:
     </p>
 
-    <p style="
-    font-size:20px;
-    margin-bottom:5px;
-    font-weight:600;
-    ">
+    <p class="price-label">
     💰 Estimated Resale Value
     </p>
 
-    <h1 style="
-    font-size:60px;
-    margin-top:0;
-    margin-bottom:5px;
-    font-weight:700;
-    color:white;
-    ">
+    <h1 class="price-value">
     ₹{price_lakh:.2f} Lakhs
     </h1>
 
-    <p style="
-    font-size:24px;
-    margin-top:0;
-    margin-bottom:30px;
-    color:#D1FAE5;
-    ">
+    <p class="price-full">
     (₹{prediction:,.0f})
     </p>
 
@@ -312,19 +448,15 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     margin:25px 0;
     ">
 
-    <p style="font-size:18px;">
+    <p class="model-info">
     ✅ <b>Model Used:</b> Tuned XGBoost Regressor
     </p>
 
-    <p style="font-size:18px;">
+    <p class="model-info">
     📈 <b>Model Accuracy (R²):</b> <b>93.5%</b>
     </p>
 
-    <p style="
-    margin-top:25px;
-    font-style:italic;
-    color:#D1FAE5;
-    ">
+    <p class="disclaimer">
     This prediction is based on historical used car market data and should be considered an estimate.
     </p>
 
