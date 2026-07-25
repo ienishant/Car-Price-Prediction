@@ -264,7 +264,7 @@ st.markdown("""
 # 🚗 Used Car Price Prediction
 # </h1>
 # <p style="color:white;font-size:22px;margin-top:10px;">
-# Predict the resale value of a used car using Machine Learning
+# Predict the car value of a used car using Machine Learning
 # </p>
 # </div>
 # """, unsafe_allow_html=True)
@@ -272,7 +272,7 @@ st.markdown("""
 #title
 
 st.success(
-    "This application estimates the resale value of cars using a machine learning model trained on 39,298 real vehicle records."
+    "This application estimates the price of new/used cars using a machine learning model trained on 39,298 real vehicle records."
 )
 
 # ===========================
@@ -298,7 +298,7 @@ st.sidebar.divider()
 st.sidebar.markdown("""
 ### 📌 About
 
-This application predicts the resale price of a car using a **Tuned XGBoost Regression Model**.
+This application predicts the price of a new/used car using a **Tuned XGBoost Regression Model**.
 
 ### 🧠 Machine Learning Model
 - XGBoost Regressor
@@ -426,11 +426,11 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     </h2>
 
     <p class="prediction-text">
-    Based on the selected specifications, the estimated resale value of this vehicle is:
+    Based on the selected specifications, the estimated value of this vehicle is:
     </p>
 
     <p class="price-label">
-    💰 Estimated Resale Value
+    💰 Estimated Car Value
     </p>
 
     <h1 class="price-value">
@@ -610,9 +610,9 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     story.append(
     Paragraph(
     """
-    This predicted resale value is generated using a Machine Learning model trained on
+    This predicted car value is generated using a Machine Learning model trained on
     39,298 historical car records. The estimate is intended for informational
-    purposes only. Actual resale prices may vary depending on vehicle condition,
+    purposes only. Actual car prices may vary depending on vehicle condition,
     location, demand, service history, insurance claims, negotiations, and market trends.
     """,
     normal
