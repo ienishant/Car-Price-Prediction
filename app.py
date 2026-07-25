@@ -16,7 +16,7 @@ if "history" not in st.session_state:
     st.session_state.history = []
 
 st.set_page_config(
-    page_title="Used Car Price Prediction",
+    page_title="Car Price Prediction",
     page_icon="🚗",
     layout="wide"
 )
@@ -240,7 +240,7 @@ st.markdown("""
 <div class="navbar">
 
 <div class="logo">
-🚗 Used Car Price Predictor
+🚗 Car Price Predictor
 </div>
 
 <div class="menu">
@@ -272,14 +272,14 @@ st.markdown("""
 #title
 
 st.success(
-    "This application estimates the resale value of used cars using a machine learning model trained on 39,298 real vehicle records."
+    "This application estimates the resale value of cars using a machine learning model trained on 39,298 real vehicle records."
 )
 
 # ===========================
 # Sidebar
 # ===========================
 
-st.sidebar.title("🚗 Used Car Price Predictor")
+st.sidebar.title("🚗 Car Price Predictor")
 
 st.sidebar.success("✅ Model Ready")
 
@@ -298,7 +298,7 @@ st.sidebar.divider()
 st.sidebar.markdown("""
 ### 📌 About
 
-This application predicts the resale price of a used car using a **Tuned XGBoost Regression Model**.
+This application predicts the resale price of a car using a **Tuned XGBoost Regression Model**.
 
 ### 🧠 Machine Learning Model
 - XGBoost Regressor
@@ -457,7 +457,7 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     </p>
 
     <p class="disclaimer">
-    This prediction is based on historical used car market data and should be considered an estimate.
+    This prediction is based on historical car market data and should be considered an estimate.
     </p>
 
     </div>
@@ -475,7 +475,7 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
 
     # 📈 **Model Accuracy (R²):** **93.5%**
 
-    # *This prediction is based on historical used car market data and should be considered an estimate.*
+    # *This prediction is based on historical car market data and should be considered an estimate.*
     # """)
     from io import BytesIO
     from datetime import datetime
@@ -508,7 +508,7 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     # Title
     # ==========================
 
-    story.append(Paragraph(" Used Car Price Prediction Report", title))
+    story.append(Paragraph("Car Price Prediction Report", title))
     story.append(
         Paragraph(
             f"Generated on: {datetime.now().strftime('%d %B %Y  %I:%M %p')}",
@@ -611,7 +611,7 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     Paragraph(
     """
     This predicted resale value is generated using a Machine Learning model trained on
-    39,298 historical used car records. The estimate is intended for informational
+    39,298 historical car records. The estimate is intended for informational
     purposes only. Actual resale prices may vary depending on vehicle condition,
     location, demand, service history, insurance claims, negotiations, and market trends.
     """,
@@ -629,7 +629,7 @@ if st.button("🚗 Predict Price",use_container_width=True,type="primary"):
     """
     <hr/>
     <center>
-    <b>Used Car Price Prediction System</b><br/>
+    <b>Car Price Prediction System</b><br/>
     Built using Python • Streamlit • XGBoost<br/>
     Developed by <b>Nishant (BCA-III)</b>
     </center>
@@ -676,7 +676,7 @@ st.divider()
 st.markdown("""
 <div style="text-align:center;color:gray;font-size:15px;margin-top:15px;">
 
-© 2026 Used Car Price Prediction<br>
+© 2026 Car Price Prediction<br>
 
 Built with ❤️ using Python • Streamlit • XGBoost<br>
 
